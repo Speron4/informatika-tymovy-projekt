@@ -1,6 +1,9 @@
 #include "kuzelky.h"
+#include "vypocet_skore.h"
 #include <iostream>
 #include <vector>
+
+std::vector<int> hody;
 
 void vypisZlabky() {
     for (int i = 0; i < 20; ++i) {
@@ -21,6 +24,7 @@ void vypisDrahu(int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
+            hody.push_back(0);
             break;
         // pozice na levé půlce dráhy
         case 1: // srazí jednu kuželku
@@ -32,6 +36,7 @@ void vypisDrahu(int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
+            hody.push_back(1);
             break;
 
         case 2:
@@ -43,6 +48,7 @@ void vypisDrahu(int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
+            hody.push_back(2);
             break;
 
         case 3:
@@ -54,6 +60,7 @@ void vypisDrahu(int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
+            hody.push_back(3);
             break;
 
         case 4:
@@ -65,6 +72,7 @@ void vypisDrahu(int pozice) {
                 "||     8   ||",
                 "||    8    ||",
             };
+            hody.push_back(4);
             break;
 
         case 5:
@@ -76,6 +84,7 @@ void vypisDrahu(int pozice) {
                 "||     8   ||",
                 "||    8    ||",
             };
+            hody.push_back(6);
             break;
 
         case 6:
@@ -87,6 +96,7 @@ void vypisDrahu(int pozice) {
                 "||         ||",
                 "||         ||",
             };
+            hody.push_back(9);
             break;
 
         case 7:
@@ -98,6 +108,7 @@ void vypisDrahu(int pozice) {
                 "||         ||",
                 "||         ||",
             };
+            hody.push_back(10);
             break;
         // pozice na pravé půlce dráhy
         case 8:
@@ -109,6 +120,7 @@ void vypisDrahu(int pozice) {
                 "||         ||",
                 "||         ||",
             };
+            hody.push_back(9);
             break;
         
         case 9:
@@ -120,6 +132,7 @@ void vypisDrahu(int pozice) {
                 "||   8     ||",
                 "||    8    ||",
             };
+            hody.push_back(6);
             break;
 
         case 10:
@@ -131,6 +144,7 @@ void vypisDrahu(int pozice) {
                 "||   8     ||",
                 "||    8    ||",
             };
+            hody.push_back(4);
             break;
 
         case 11:
@@ -142,6 +156,7 @@ void vypisDrahu(int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
+            hody.push_back(3);
             break;
 
         case 12:
@@ -153,6 +168,7 @@ void vypisDrahu(int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
+            hody.push_back(2);
             break;
 
         case 13:
@@ -164,6 +180,7 @@ void vypisDrahu(int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
+            hody.push_back(1);
             break;
     }
     // vypíše vector draha
@@ -172,4 +189,8 @@ void vypisDrahu(int pozice) {
     }
 
     vypisZlabky();
+}
+// prozatímní implementace výpočtu z vypocet_skore.cpp
+void skore() {
+    std::cout << vypocetSkore(hody);
 }
