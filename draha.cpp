@@ -29,9 +29,9 @@ void bwl_koule(int iterations)
 
         int pos; // určí kolik mezer bude před "0"
 
-        if (prubeh <= 1) pos = 0;
-        else if (prubeh <= 3) pos = 2;
-        else if (prubeh <= 5) pos = 4;
+        if (prubeh <= 1) pos = 0; // počáteční pozice
+        else if (prubeh <= 3) pos = 2; // postupné posuny doprava o 2 mezery
+        else if (prubeh <= 5) pos = 4; //      
         else if (prubeh <= 8) pos = 6;
         else if (prubeh <= 10) pos = 8;
         else if (prubeh <= 12) pos = 10;
