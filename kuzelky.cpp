@@ -371,11 +371,108 @@ void vypisDrahu2(int pozice2, int pozice){
             
             break;
 
-        case 4: // pokračování příště 
+        case 4:
+            if (pozice == 0 || pozice == 1 || pozice == 2 || pozice == 3 || pozice == 14) {
+                draha2 = vypisDrahu(4);
+            }
 
+            else if (pozice == 9) {
+                draha2 = {
+                "*************",
+                "||~~~~~~~~~||",
+                "||         ||",
+                "||         ||",
+                "||         ||",
+                "||    8    ||",
+            };
+            }
 
+            else if (pozice == 10) {
+                draha2 = {
+                    "*************",
+                    "||~~~~~~~~~||",
+                    "||         ||",
+                    "||    8    ||",
+                    "||         ||",
+                    "||    8    ||",
+                };
+            }
 
+            else if (pozice == 11) {
+                draha2 = {
+                    "*************",
+                    "||~~~~~~~~~||",
+                    "||         ||",
+                    "||    8    ||",
+                    "||     8   ||",
+                    "||    8    ||",
+                };
+            }
 
+            else if (pozice == 12) {
+                draha2 = {
+                    "*************",
+                    "||~~~~~~~~~||",
+                    "||     8   ||",
+                    "||    8    ||",
+                    "||     8   ||",
+                    "||    8    ||",
+                };
+            }
+
+            else if (pozice == 13) {
+                draha2 = {
+                "*************",
+                "||~~~~~~~~~||",
+                "||     8   ||",
+                "||    8 8  ||",
+                "||     8   ||",
+                "||    8    ||",
+            };
+            }
+            else {
+                draha2 = vypisDrahu2(3, pozice);
+            }
+            break;
+
+        case 5:
+            
+            if (pozice == 9 || pozice == 10) {
+                draha2 = vypisDrahu2(4, 9);
+            }
+
+            else if (pozice == 11 || pozice == 12) {
+                draha2 = {
+                    "*************",
+                    "||~~~~~~~~~||",
+                    "||         ||",
+                    "||         ||",
+                    "||     8   ||",
+                    "||    8    ||",
+                };
+            }
+
+            else if (pozice == 13) {
+                draha2 = {
+                    "*************",
+                    "||~~~~~~~~~||",
+                    "||         ||",
+                    "||      8  ||",
+                    "||     8   ||",
+                    "||    8    ||",
+                };
+            }
+
+            else if (pozice == 6 || pozice == 7 || pozice == 8) {
+                draha2 = vypisDrahu(pozice); // spare
+            }
+
+            else {
+                draha2 = vypisDrahu(5);
+            }
+            break;
+
+        case 6:
 
 
 
