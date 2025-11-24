@@ -13,7 +13,7 @@ int main() {
     std::thread anim([&]() {
         
             system("clear");             // vyčistit konzoli
-            vypisDrahu();          // první kuželky
+            vypisDrahu(prubeh);          // první kuželky
             std::cout << "\n";           // oddělovač
             vykresliDrahu(prubeh, run);     // pak dráhu
             std::this_thread::sleep_for(std::chrono::milliseconds(150));
@@ -32,7 +32,7 @@ int main() {
 
     // znovu překreslit kuželky podle Master
     system("clear");
-    vypisDrahu();
+    vypisDrahu(Master);
 
     return 0;
 }
