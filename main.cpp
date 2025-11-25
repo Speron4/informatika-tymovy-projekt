@@ -4,6 +4,7 @@
 #include <atomic>
 #include <iostream>
 #include <cstdlib>
+#include <chrono>
 
 void vypisSkoreZaFrame(int frame_number) {
     // Vypís aktuálního celkového  skóre s označením framu.
@@ -75,6 +76,9 @@ int main() {
 
         //vypis skore za frame
         vypisSkoreZaFrame(i + 1);
+
+        // pauza 3 s před další dvojicí hodů - vypíše kuželky po druhém hodu a body za daný frame
+        std::this_thread::sleep_for(std::chrono::seconds(3));
 
 
         i++;
